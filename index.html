@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Dator tīkli</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/mansStils.css">
+    </head>
+    <body>
+<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">Pictures</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Links</button>
+
+
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+  <p><h1>Dator tīklu veidi:</h1>
+        <ul>
+  <li>koplietojamas datnes, kas samazina nepieciešamību tās dublēt vairākos datoros un atbrīvo no to versiju pārvaldības;</li>
+  <li>vienlaicīga datu lietošana, piemēram, datu bāzēs;</li>
+  <li>koplietojama programmatūra, ko iespējams lietot tieši no servera, nevis instalēt katrā datorā;</li>
+  <li>koplietojama aparatūra, kas samazina kopējās tās izmaksas, piemēram, tīklā var lietot vienu printeri vai skeneri;</li>
+  <li>lietotājs vajadzīgajiem resursiem var piekļūt no jebkura tīkla datora.</li>
+</ul>
+
+        
+        <p><a href="https://profizgl.lu.lv/mod/book/view.php?id=22319&chapterid=6880" target="_blank">Papildus informācija</a></p>
+        <p><a href="internets.html" target="_blank">Internets</a></p></p>
+</div>
+
+<div id="News" class="tabcontent">
+  <h3>Attēli</h3>
+  <p><img src="images/datortikls.png" alt="Dator tīkla attēlojums"></p> 
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>Saites</h3>
+  <p><a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_navbar_slide"> saite</a></p>
+  <p><a href="https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_navbar_fixed_top"> saite</a></p>
+  <p><a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_full_page_tabs"> saite</a></p>
+</div>
+
+
+        
+        <script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+    </body>
+</html>
