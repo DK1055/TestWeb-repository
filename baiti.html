@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div></div>
+        
+        <form>
+            <p>Aprēķināt cik daudz informācijas var lejupieldādēt</p>
+            <p><input value="" name="sekundes"> sekundēs. ja interneta ātrums ir 25 Mbps.</p>
+            <p>Atbilde</p>
+            <p>
+                <input value="" name="atbilde" id="atbilde">
+                <input type="radio" id="KiB" name="radio1" onclick="myFunctionKB(sekundes.value)" value="">KiB
+            <input type="radio" id="KB" name="radio1" onclick="myFunctionKB(sekundes.value)" value="">KB
+            </p>
+        </form>
+        <script>
+            function myFunctionKB(sekundes){
+                var result;
+                if(document.getElementsByIdName("KB").checked){
+                    result = sekundes * 1000*25/8;
+                    document.getElementsByIdName("atbilde").value = result;
+                }
+                if(document.getElementsByIdName('KiB').checked){
+                    result = sekundes *  1024*25/8;
+                    document.getElementsByIdName("atbilde").value = result;
+                }
+                 
+                
+            }
+          </script>  
+        
+        
+        
+    </body>
+</html>
